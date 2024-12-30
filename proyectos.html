@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICSI OIL & GAS- Contacto</title>
+    <link rel="icon" href="../Recursos_Media/logoicsi.png" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/proyectos.css">
+    <style>
+    
+        /* Estilos del modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.5); 
+            justify-content: center; 
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color:whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 500px;
+        }
+
+        .close {
+            color: red;
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Enlace de correo */
+        a {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        /* Estilos del formulario */
+        form input, form textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Menú principal -->
+    <header>
+        <div class="contenedor">
+            <div class="contenedor_logo_y_texto">
+                <p class="textologo"><span class="color_degradado_icsi">ICSI OIL & GAS</span></p>
+                <div class="contenedor_imagen_logo_header"></div>
+
+                <nav id="menu_principal">
+                    <a href="../estructuras/inicio.html">INICIO</a>
+                    <a href="../estructuras/quienessomos.html">SOBRE NOSOTROS</a>
+                    <a href="../estructuras/servicios.html">SERVICIOS</a>
+                    <a href="../estructuras/proyectos.html">CONTACTANOS</a>
+                    <a href="../estructuras/calculadora.html">CALCULADORA</a>
+                    <form role="search">
+                        <input type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">BUSCAR</button>
+                    </form>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Formulario de contacto adicional -->
+    <header id="imagenquienessomos">
+        <div class="contact-container">
+            <h3>Formulario de contacto</h3>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                  
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </header>
+
+    
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Contactar a: <span id="email-destino"></span></h3>
+            <form id="contact-form">
+                <input type="text" id="nombre-modal" name="nombre-modal" placeholder="Tu nombre" required>
+                <input type="email" id="correo-modal" name="correo-modal" placeholder="Tu correo electrónico" required>
+                <textarea id="mensaje-modal" name="mensaje-modal" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <h2></h2>
+    <div class="contactanos-container">
+        <section class="main-container">
+            <!-- Primer contenedor -->
+            <div class="sub-container left">
+                <h2>Recursos Humanos</h2>
+                <p><a href="#" class="email-link" data-email="ari080419@gmail.com">ari080419@gmail.com</a></p>
+                <p><img src="../Recursos_Media/icons8-teléfono-sonando-48.png" alt="Icono">9222021783</p>
+    
+                <h2>Mantenimiento</h2>
+                <p><a href="#" class="email-link" data-email="mantenimiento@icsiog.com">mantenimiento@icsiog.com</a></p>
+                <p><img src="../Recursos_Media/icons8-teléfono-sonando-48.png" alt="Icono">9222021783</p>
+    
+                <h2>Medición</h2>
+                <p><a href="#" class="email-link" data-email="medicion@icsiog.com">medicion@icsiog.com</a></p>
+                <p><img src="../Recursos_Media/icons8-teléfono-sonando-48.png" alt="Icono">9222021783</p>
+    
+                <h2>Servicios</h2>
+                <p><a href="#" class="email-link" data-email="servicios@icsiog.com">servicios@icsiog.com</a></p>
+                <p><img src="../Recursos_Media/icons8-teléfono-sonando-48.png" alt="Icono">9222021783</p>
+            </div>
+    
+            <!-- Segundo contenedor -->
+            <div class="sub-container right">
+                <h2>Seguridad</h2>
+                <p><a href="#" class="email-link" data-email="seguridad@icsiog.com">seguridad@icsiog.com</a></p>
+                <p><img src="../Recursos_Media/icons8-teléfono-sonando-48.png" alt="Icono">9222021783</p>
+    
+                <h2>Proyectos Especiales</h2>
+                <p><a href="#" class="email-link" data-email="proyectos.especiales@icsiog.com">proyectos.especiales@icsiog.com</a></p>
+                <p><img src="../Recursos_Media/icons8-teléfono-sonando-48.png" alt="Icono">9222021783</p>
+    
+                <h2>Compras</h2>
+                <p><a href="#" class="email-link" data-email="compras@icsiog.com">compras@icsiog.com</a></p>
+                <p><img src="../Recursos_Media/icons8-teléfono-sonando-48.png" alt="Icono">9222021783</p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Contactar a: <span id="email-destino"></span></h3>
+            <form id="contact-form">
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        // Obtener los elementos del DOM
+        const emailLinks = document.querySelectorAll('.email-link');
+        const modal = document.getElementById('modal');
+        const closeModal = document.querySelector('.close');
+        const emailDestino = document.getElementById('email-destino');
+        const contactForm = document.getElementById('contact-form');
+    
+        // Variable para almacenar el correo destino
+        let correoDestino = '';
+    
+        // Agregar eventos a los enlaces de correos
+        emailLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                // Obtener el correo del área seleccionada
+                correoDestino = this.getAttribute('data-email');
+    
+                // Mostrar el correo en el modal
+                emailDestino.textContent = correoDestino;
+    
+                // Mostrar el modal
+                modal.style.display = 'flex';
+            });
+        });
+    
+        // Cerrar el modal al hacer clic en la "X"
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+    
+        // Cerrar el modal si se hace clic fuera del contenido
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        };
+    
+        // Manejar el envío del formulario
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            // Obtener los datos del formulario
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const mensaje = document.getElementById('mensaje').value;
+    
+            // Simular el envío del formulario mostrando un mensaje de alerta.
+            alert(`Mensaje enviado a: ${correoDestino}\nNombre: ${nombre}\nCorreo: ${correo}\nMensaje: ${mensaje}`);
+    
+            // Cerrar el modal
+            modal.style.display = 'none';
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="contenedor_banner">
+            <p>&copy; ICSI OIL & GAS</p>
+        </div>
+    </footer>
