@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+} 
+
+h1 { font-size: 3.2em; }
+h2 { font-size: 2.7em; }
+h3 { font-size: 2em; }
+p { font-size: 1.25em; }
+
+button {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background: linear-gradient(to right, #0070C0, #03A64A);
+}
+
+button:hover {
+    background: linear-gradient(to right, #014678, #026d31);
+}
+
+.contenedor {
+    max-width: 100%;
+    margin: auto;
+}
+
+.color_degradado_icsi {
+    color: transparent; 
+    background: linear-gradient(to right, #0070C0, #03A64A); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+}
+
+header {
+    background-color: rgb(30, 30, 30);
+    padding: 10px 20px;
+    position: fixed; /* Fija el header en la parte superior de la página */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el header cubra todo el ancho de la página */
+    z-index: 1000; /* Asegura que el header quede por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Añade una sombra para dar un poco de profundidad */
+}
+
+header .textologo {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.contenedor_logo_y_texto {
+    display: flex; /* Mantén flex para alinear los elementos en una fila */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    justify-content: space-between; /* Añade espacio entre los elementos */
+}
+
+.contenedor_imagen_logo_header {
+    background-image: url("Recursos_Media/logoicsi.png");
+    background-size: contain; /* Ajusta la imagen para que se contenga dentro del contenedor */
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 70px; /* Ajusta el tamaño del contenedor */
+    height: 50px; /* Ajusta el tamaño del contenedor */
+}
+
+#menu_principal {
+    display: flex; /* Utiliza flex para alinear los enlaces en una fila */
+    gap: 20px; /* Añade espacio entre los elementos */
+    padding: 0; /* Elimina el padding automático */
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+header a {
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px; /* Ajusta el padding para los enlaces */
+    transition: color 0.3s ease, background 0.3s ease; /* Transiciones suaves para los hover */
+}
+
+header a:hover {
+    background: linear-gradient(to right, #0070C0, #03A64A);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* BOTON BUSCAR */
+.btn {
+    padding: 5px 10px; /* Ajusta el espacio interno del botón (alto y ancho) */
+    font-size: 10px; /* Ajusta el tamaño de la fuente */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    width: 90px; /* Ajusta el ancho del botón */
+    height: 30px; /* Ajusta la altura del botón */
+}
+
+.contenedor_banner {
+    max-width: 100%;
+    text-align: center;
+}
+
+#imageninicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: url("Recursos_Media/Fondo_Home.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#imageninicio h1{
+    color: white;
+}
+
+#imageninicio button{
+    font-size: 2em;
+}
+
+#textoicsi{
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+}
+
+#textoicsi .contenedor{
+    padding: 30px 20px;
+}
+
+/*OTRA SECCION */
+#boton_proyectos{
+    background: #0070C0;
+    color: white;
+}
+
+#boton_proyectos:hover{
+    background:#014678;
+    color: rgba(255, 255, 255, 0.811);
+}
+
+/*OTRA SECCION */
+#seccionproyectos{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#seccionproyectos .contenedor{
+    padding: 100px 0px;
+}
+
+#seccionproyectos h2{
+    margin-top: 0;
+    font-size: 3em;
+}
+
+#seccionproyectos p{
+    display: none;
+}
+
+#seccionproyectos .proyecto{
+    background-size: cover;
+    background-position: center center;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.proyecto:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("Recursos_Media/Proyecto_Oma_Mina.jpeg");
+}
+
+.proyecto:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("Recursos_Media/Proyecto_Zempoala.jpeg");
+}
+
+.proyecto:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("Recursos_Media/Proyecto_Cerritos.jpeg");
+}
+
+.proyecto:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("Recursos_Media/Proyecto_Virtual.jpeg");
+}
+
+/*OTRA SECCION */
+footer{
+    background-color: rgb(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer .contenedor{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 1500px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .contenedor{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header .textologo{
+        margin: 20px;
+        padding: auto;
+        font-weight: bold;
+        font-size: 2.2em;
+    }
+
+    .contenedor_imagen_logo_header {
+        background-size: 30%;
+        margin-left: -320px;
+    }
+
+    #menu_principal {
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    /*OTRA SECCION */
+    #imageninicio h1{
+        font-size: 5em;
+    }
+
+    /*OTRA SECCION */
+    #textoicsi .contenedor{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #textoicsi .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: justify;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #textoicsi h2{
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    #textoicsi .contenedor_imagen_texto{
+        background-image: url("Recursos_Media/Fondo_Servicios.png");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+        
+    /*OTRA SECCION */
+    #seccionproyectos .proyectos{
+        display: flex;
+        justify-content: center;
+    }
+
+    #seccionproyectos .proyecto{
+        padding: 60px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgba(50,50,50,0.5);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+}
